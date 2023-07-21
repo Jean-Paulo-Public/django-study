@@ -1,0 +1,5 @@
+source venv/bin/activate
+deactivate
+pip freeze > requirements.txt
+django-admin help
+django-admin startproject setup .
