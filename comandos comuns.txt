@@ -3,3 +3,5 @@ deactivate
 pip freeze > requirements.txt
 django-admin help
 django-admin startproject setup .
+git@github.com:Jean-Paulo-Public/django-study.git
+git push git@github.com:Jean-Paulo-Public/django-study.git
