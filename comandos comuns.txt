@@ -5,3 +5,5 @@ django-admin help
 django-admin startproject setup .
 git@github.com:Jean-Paulo-Public/django-study.git
 git push git@github.com:Jean-Paulo-Public/django-study.git
+control+ship+p>python?select interpreter>python (venv)
+python manage.py runserver
