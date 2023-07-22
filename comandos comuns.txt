@@ -9,3 +9,4 @@ control+ship+p>python?select interpreter>python (venv)
 [ Env ]
 source venv/bin/activate
     python manage.py runserver
+    python manage.py startapp {name}
