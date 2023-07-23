@@ -3,4 +3,14 @@
 {% block content %}
     <h1>Hello World!</h1>
     <a href="{% url 'imagem' %}">imagem</a>
+    
+    <div class="footer">
+        &copy;<span id="year"> </span><span> Your Company Name. All rights reserved.</span>
+    </div>
+
+    <script type="text/javascript">
+        let year = document.querySelector("#year");
+
+        year.innerText = new Date().getFullYear();
+    </script>
 {% endblock %}

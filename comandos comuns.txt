@@ -10,3 +10,4 @@ control+ship+p>python?select interpreter>python (venv)
 source venv/bin/activate
     python manage.py runserver
     python manage.py startapp {name}
+    python manage.py collectstatic
