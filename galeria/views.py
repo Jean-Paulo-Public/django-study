@@ -5,9 +5,11 @@ from django.http import HttpResponse
 def index(request):
     dados = {
              1:{"title": "Python",
-                "text": "Python é uma linguagem de programação"},
+                "text": "Python é uma linguagem de programação",
+                "foto": "/assets/imagens/Python_Logo.webp"},
              2:{"title": "DJango",
-                "text": "Django e um framework python"}                
+                "text": "Django e um framework python",
+                "foto": "/assets/imagens/Django-Framework-Logo.png"}                
             }
     return render(request, 'galeria/index.html', {"cards": dados})
 
