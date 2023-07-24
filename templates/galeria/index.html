@@ -1,13 +1,21 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="card" style="width: 18rem;">
-        <a href="{% url 'imagem' %}">
-            <img class="card-img-top" src="{% static '/assets/imagens/Django-Framework-Logo.png' %}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-        <h5 class="card-title">DJango</h5>
-        <p class="card-text">Django e um framework python.</p>
+<div class="container">
+    <div class="row">
+        {% for foto_id, info in cards.items %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'imagem' %}">
+                    <img class="card-img-top" src="{% static '/assets/imagens/Django-Framework-Logo.png' %}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                <h5 class="card-title">{{info.title}}</h5>
+                <p class="card-text">{{info.text}}</p>
+                </div>
+            </div>
         </div>
+        {% endfor %}        
     </div>
+  </div>
 {% endblock %}
