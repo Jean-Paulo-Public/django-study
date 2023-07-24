@@ -3,19 +3,22 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        {% for foto_id, info in cards.items %}
+        {% if cards %}
+        {% for fotografia in cards %}
         <div class="col">
             <div class="card" style="width: 18rem;">
                 <a href="{% url 'imagem' %}">
-                    <img class="card-img-top" src="{% static info.foto %}" alt="Card image cap">
+                    <img class="card-img-top" src="{% static fotografia.foto %}" alt="Card image cap">
                 </a>
                 <div class="card-body">
-                <h5 class="card-title">{{info.title}}</h5>
-                <p class="card-text">{{info.text}}</p>
+                <h5 class="card-title">{{fotografia.title}}</h5>
+                <p class="card-text">{{fotografia.text}}</p>
                 </div>
             </div>
         </div>
-        {% endfor %}        
+        {% endfor %}    
+        {% else %} 
+        {% endif %}   
     </div>
   </div>
 {% endblock %}
