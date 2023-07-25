@@ -2,23 +2,21 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        {% if cards %}
+    {% if cards %}
+    <div class="d-flex flex-wrap">
         {% for fotografia in cards %}
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <a href="{% url 'imagem' %}">
-                    <img class="card-img-top" src="{% static fotografia.foto %}" alt="Card image cap">
-                </a>
-                <div class="card-body">
-                <h5 class="card-title">{{fotografia.title}}</h5>
-                <p class="card-text">{{fotografia.text}}</p>
-                </div>
+        <div class="card m-3" style="width: 18rem;">
+            <a href="{% url 'imagem' %}">
+                <img class="card-img-top" src="{% static fotografia.foto %}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">{{fotografia.title}}</h5>
+            <p class="card-text">{{fotografia.text}}</p>
             </div>
         </div>
         {% endfor %}    
-        {% else %} 
-        {% endif %}   
     </div>
+    {% else %} 
+    {% endif %}   
   </div>
 {% endblock %}
