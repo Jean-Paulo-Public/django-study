@@ -6,7 +6,7 @@
     <div class="d-flex flex-wrap">
         {% for fotografia in cards %}
         <div class="card m-3" style="width: 18rem;">
-            <a href="{% url 'imagem' %}">
+            <a href="{% url 'imagem' fotografia.id %}">
                 <img class="card-img-top" src="{% static fotografia.foto %}" alt="Card image cap">
             </a>
             <div class="card-body">
